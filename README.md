@@ -244,9 +244,9 @@ Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/F
 
 比如说 Quantumult X：
 
-1. 因为一些软件的 User-Agent 的名字是同名的，所以降低了 USER-AGENT 规则类型的优先级到了一个基本不能用的状态。
+1. 因为考虑到一些软件的 User-Agent 的名字是同名的，所以降低了 USER-AGENT 规则类型的优先级，这也就造成了目前不能仅靠 UA 规则覆盖其他规则。
 
-2. host-keyword 的优先级没有其他 host 规则类型高，也就是说你如果有如下这样的规则
+2. host-keyword 的优先级没有其他 host 规则类型高，也就是说如果有如下这样的规则
 
    ```
    host-keyword, baidu, reject
@@ -255,7 +255,7 @@ Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/F
 
    不管规则在 remote 还是 local、不管规则顺序先后，`host-keyword, baidu, reject` 都是不生效的。
 
-比如说 Surge：Rewrite 和 MitM 不能如 Ruleset 规则那样远程管理，不能处理 TUN 的广告。
+比如说 Surge：Rewrite 和 MitM 不能如 Ruleset 规则那样远程管理，不能处理 TUN 的广告，目前少有的支持「FINAL,PROXY,dns-failed」、「force-http-engine-hosts」等特性。
 
 还有一些不同没有说明，这里主要挑些经常会遇到的，以上差异化说明仅是为了方便选择购买和使用应用时的注意事项，**一个应用的某个功能的缺失，并不能说明这个应用不好而是不符合你的需求，你需要了解你的需求和你想要购买的产品，根据需求选择产品也是这些年 Apple 及其员工一直在给我的理念**。
 
